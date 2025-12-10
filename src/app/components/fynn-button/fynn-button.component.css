@@ -1,0 +1,203 @@
+:host {
+    display: inline-flex;
+}
+
+.fynn-button {
+    font-family: var(--fynn-new-font-family);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--fynn-space-8);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+
+    /* Font styles */
+    font-size: var(--fynn-font-size-base);
+    line-height: var(--fynn-line-height-base);
+    font-weight: var(--fynn-font-weight-regular);
+}
+
+.fynn-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* SIZES */
+
+/* Default Size */
+.size-default {
+    height: 40px;
+    padding: 0 var(--fynn-padding-16);
+    border-radius: var(--fynn-radius-8);
+}
+
+.size-default.icon-only {
+    width: 40px;
+    padding: 0;
+}
+
+/* Small Size */
+.size-small {
+    height: 32px;
+    padding: 0 var(--fynn-padding-12);
+    border-radius: var(--fynn-radius-8);
+}
+
+.size-small.icon-only {
+    width: 32px;
+    padding: 0;
+}
+
+/* VARIANTS & COLORS */
+
+/* --- SOLID --- */
+
+/* Primary Solid */
+.variant-solid.color-primary {
+    background-color: var(--fynn-color-primary);
+    color: var(--fynn-color-primary-contrast);
+}
+
+.variant-solid.color-primary:not(:disabled):hover {
+    background-color: var(--fynn-color-primary-tint);
+}
+
+.variant-solid.color-primary:not(:disabled):active {
+    background-color: var(--fynn-color-primary-shade);
+}
+
+/* Danger Solid */
+.variant-solid.color-danger {
+    background-color: var(--fynn-color-danger);
+    color: var(--fynn-color-danger-contrast);
+}
+
+.variant-solid.color-danger:not(:disabled):hover {
+    background-color: var(--fynn-color-danger-tint);
+}
+
+.variant-solid.color-danger:not(:disabled):active {
+    background-color: var(--fynn-color-danger-shade);
+}
+
+/* Dark Solid */
+.variant-solid.color-dark {
+    background-color: var(--fynn-color-dark);
+    color: var(--fynn-color-dark-contrast);
+}
+
+.variant-solid.color-dark:not(:disabled):hover {
+    background-color: var(--fynn-color-dark-tint);
+}
+
+.variant-solid.color-dark:not(:disabled):active {
+    background-color: var(--fynn-color-dark-shade);
+}
+
+/* --- OUTLINE --- */
+
+/* Base Outline styles */
+.variant-outline {
+    background-color: transparent;
+    border: 1px solid;
+}
+
+/* Primary Outline */
+.variant-outline.color-primary {
+    border-color: var(--fynn-color-primary);
+    color: var(--fynn-color-primary);
+}
+
+.variant-outline.color-primary:not(:disabled):hover {
+    color: var(--fynn-color-primary-tint);
+    border-color: var(--fynn-color-primary-tint);
+}
+
+.variant-outline.color-primary:not(:disabled):active {
+    color: var(--fynn-color-primary-shade);
+}
+
+/* Danger Outline */
+.variant-outline.color-danger {
+    border-color: var(--fynn-color-danger);
+    color: var(--fynn-color-danger);
+}
+
+.variant-outline.color-danger:not(:disabled):hover {
+    color: var(--fynn-color-danger-tint);
+    border-color: var(--fynn-color-danger-tint);
+}
+
+.variant-outline.color-danger:not(:disabled):active {
+    color: var(--fynn-color-danger-shade);
+}
+
+/* Dark Outline */
+.variant-outline.color-dark {
+    border-color: var(--fynn-color-dark);
+    color: var(--fynn-color-dark);
+}
+
+.variant-outline.color-dark:not(:disabled):hover {
+    color: var(--fynn-color-dark-tint);
+    border-color: var(--fynn-color-dark-tint);
+}
+
+.variant-outline.color-dark:not(:disabled):active {
+    color: var(--fynn-color-dark-shade);
+    border-color: var(--fynn-color-dark-shade);
+}
+
+
+/* --- CLEAR (Ghost) --- */
+
+.variant-clear {
+    background-color: transparent;
+}
+
+/* Primary Clear */
+.variant-clear.color-primary {
+    color: var(--fynn-color-primary);
+}
+
+.variant-clear.color-primary:not(:disabled):hover {
+    background-color: transparent;
+    color: var(--fynn-color-primary-shade);
+}
+
+.variant-clear.color-primary:not(:disabled):active {
+    background-color: transparent;
+    color: var(--fynn-color-primary-tint);
+}
+
+/* Danger Clear */
+.variant-clear.color-danger {
+    color: var(--fynn-color-danger);
+}
+
+.variant-clear.color-danger:not(:disabled):hover {
+    background-color: transparent;
+    color: var(--fynn-color-danger-shade);
+}
+
+.variant-clear.color-danger:not(:disabled):active {
+    background-color: transparent;
+    color: var(--fynn-color-danger-tint);
+}
+
+/* Dark Clear */
+.variant-clear.color-dark {
+    color: var(--fynn-color-dark);
+}
+
+.variant-clear.color-dark:not(:disabled):hover {
+    background-color: transparent;
+    color: var(--fynn-color-dark-shade);
+}
+
+.variant-clear.color-dark:not(:disabled):active {
+    background-color: transparent;
+    color: var(--fynn-color-dark-tint);
+}

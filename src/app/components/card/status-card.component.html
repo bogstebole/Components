@@ -5,12 +5,12 @@
             <fynn-text color="medium-faded" size="label" weight="regular">{{ timestamp }}</fynn-text>
         </div>
         <div slot="actions" class="status-card-actions">
-            <button class="action-button" aria-label="Edit">
-                <icon name="create-outline" [size]="16"></icon>
-            </button>
-            <button class="action-button" aria-label="Delete">
-                <icon name="trash-outline" [size]="16"></icon>
-            </button>
+            <fynn-button variant="clear" color="dark" size="default" [iconOnly]="true" aria-label="Edit">
+                <icon name="create-outline" [size]="20"></icon>
+            </fynn-button>
+            <fynn-button variant="clear" color="dark" size="default" [iconOnly]="true" aria-label="Delete">
+                <icon name="trash-outline" [size]="20"></icon>
+            </fynn-button>
         </div>
     </card-header>
 
