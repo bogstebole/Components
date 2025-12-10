@@ -1,0 +1,41 @@
+.card {
+    background-color: var(--fynn-color-light);
+    border-radius: var(--fynn-radius-12);
+    border: 1px solid var(--fynn-color-medium-subtle);
+    padding: var(--fynn-padding-12);
+    gap: var(--fynn-space-8);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    box-shadow:
+        0px 1px 3px 0px rgba(0, 0, 0, 0.05),
+        0px 6px 6px 0px rgba(0, 0, 0, 0.04),
+        0px 13px 8px 0px rgba(0, 0, 0, 0.03),
+        0px 23px 9px 0px rgba(0, 0, 0, 0.01),
+        0px 37px 10px 0px rgba(0, 0, 0, 0);
+}
+
+/* Show header actions on card hover */
+.card:hover ::ng-deep .card-header-actions {
+    max-width: 150px;
+    opacity: 1;
+    margin-left: var(--fynn-space-8);
+}
+
+.card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--fynn-space-4);
+}
+
+/* Remove padding from content if it has sections that handle their own padding */
+:host-context(.card-no-padding) .card-content {
+    padding: 0;
+}

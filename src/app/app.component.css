@@ -1,0 +1,111 @@
+.landing-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--fynn-padding-24);
+}
+
+.content {
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    font-family: var(--fynn-new-font-family);
+    font-size: var(--fynn-font-size-xl);
+    font-weight: var(--fynn-font-weight-semibold);
+    color: var(--fynn-color-dark);
+    margin: 0 0 var(--fynn-space-8) 0;
+}
+
+.subtitle {
+    font-family: var(--fynn-new-font-family);
+    font-size: var(--fynn-font-size-lg);
+    color: var(--fynn-color-medium);
+    margin: 0 0 var(--fynn-space-32) 0;
+}
+
+.info-card {
+    background: white;
+    border-radius: var(--fynn-radius-12);
+    padding: var(--fynn-padding-24);
+    margin-bottom: var(--fynn-space-24);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.info-card h2 {
+    font-family: var(--fynn-new-font-family);
+    font-size: var(--fynn-font-size-lg);
+    font-weight: var(--fynn-font-weight-semibold);
+    color: var(--fynn-color-dark);
+    margin: 0 0 var(--fynn-space-12) 0;
+}
+
+.info-card p {
+    font-family: var(--fynn-new-font-family);
+    font-size: var(--fynn-font-size-base);
+    color: var(--fynn-color-medium);
+    margin: 0 0 var(--fynn-space-16) 0;
+}
+
+.storybook-link {
+    display: inline-block;
+    background: var(--fynn-color-primary);
+    color: white;
+    padding: var(--fynn-padding-12) var(--fynn-padding-24);
+    border-radius: var(--fynn-radius-8);
+    text-decoration: none;
+    font-family: var(--fynn-new-font-family);
+    font-size: var(--fynn-font-size-base);
+    font-weight: var(--fynn-font-weight-semibold);
+    transition: background 0.2s ease;
+}
+
+.storybook-link:hover {
+    background: var(--fynn-color-primary-shade);
+}
+
+.components-list,
+.quick-start {
+    background: white;
+    border-radius: var(--fynn-radius-12);
+    padding: var(--fynn-padding-24);
+    margin-bottom: var(--fynn-space-24);
+}
+
+.components-list h3,
+.quick-start h3 {
+    font-family: var(--fynn-new-font-family);
+    font-size: var(--fynn-font-size-base);
+    font-weight: var(--fynn-font-weight-semibold);
+    color: var(--fynn-color-dark);
+    margin: 0 0 var(--fynn-space-16) 0;
+}
+
+.components-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.components-list li {
+    font-family: var(--fynn-new-font-family);
+    font-size: var(--fynn-font-size-base);
+    color: var(--fynn-color-medium);
+    padding: var(--fynn-space-8) 0;
+}
+
+pre {
+    background: var(--fynn-color-dark);
+    color: var(--fynn-color-light);
+    padding: var(--fynn-padding-16);
+    border-radius: var(--fynn-radius-8);
+    margin: 0;
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'Monaco', 'Courier New', monospace;
+    font-size: var(--fynn-font-size-sm);
+}

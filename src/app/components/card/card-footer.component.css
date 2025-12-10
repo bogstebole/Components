@@ -1,0 +1,7 @@
+.card-footer {
+    padding-top: var(--fynn-space-4);
+    display: flex;
+    align-items: center;
+    gap: var(--fynn-space-8);
+    color: var(--fynn-color-medium);
+}

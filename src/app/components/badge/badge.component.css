@@ -1,0 +1,72 @@
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--fynn-padding-4) var(--fynn-padding-8);
+    border-radius: var(--fynn-radius-8);
+    gap: var(--fynn-space-4);
+
+    /* Typography */
+    font-family: var(--fynn-new-font-family);
+    font-size: var(--fynn-font-size-sm);
+    line-height: var(--fynn-line-height-sm);
+    font-weight: var(--fynn-font-weight-regular);
+    white-space: nowrap;
+}
+
+/* Variants */
+
+/* Primary */
+.primary {
+    background-color: var(--fynn-color-primary);
+    color: var(--fynn-color-primary-contrast);
+}
+
+.primary-faded {
+    background-color: var(--fynn-color-primary-faded);
+    color: var(--fynn-color-primary-faded-contrast);
+}
+
+/* Success */
+.success {
+    background-color: var(--fynn-color-success);
+    color: var(--fynn-color-success-contrast);
+}
+
+.success-faded {
+    background-color: var(--fynn-color-success-faded);
+    color: var(--fynn-color-success-faded-contrast);
+}
+
+/* Warning */
+.warning {
+    background-color: var(--fynn-color-warning);
+    color: var(--fynn-color-warning-contrast);
+}
+
+.warning-faded {
+    background-color: var(--fynn-color-warning-faded);
+    color: var(--fynn-color-warning-faded-contrast);
+}
+
+/* Danger */
+.danger {
+    background-color: var(--fynn-color-danger);
+    color: var(--fynn-color-danger-contrast);
+}
+
+.danger-faded {
+    background-color: var(--fynn-color-danger-faded);
+    color: var(--fynn-color-danger-faded-contrast);
+}
+
+/* Medium */
+.medium {
+    background-color: var(--fynn-color-medium);
+    color: var(--fynn-color-medium-contrast);
+}
+
+.medium-subtle {
+    background-color: var(--fynn-color-medium-subtle);
+    color: var(--fynn-color-medium-subtle-contrast);
+}

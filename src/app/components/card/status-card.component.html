@@ -1,0 +1,25 @@
+<card>
+    <card-header>
+        <badge [variant]="badgeVariant">{{ badge }}</badge>
+        <div slot="end" *ngIf="timestamp">
+            <fynn-text color="medium-faded" size="label" weight="regular">{{ timestamp }}</fynn-text>
+        </div>
+        <div slot="actions" class="status-card-actions">
+            <button class="action-button" aria-label="Edit">
+                <icon name="create-outline" [size]="16"></icon>
+            </button>
+            <button class="action-button" aria-label="Delete">
+                <icon name="trash-outline" [size]="16"></icon>
+            </button>
+        </div>
+    </card-header>
+
+    <div class="status-card-content">
+        <fynn-text color="dark" size="paragraph" weight="semibold" *ngIf="title">{{ title }}</fynn-text>
+        <fynn-text color="medium" size="paragraph" weight="regular" *ngIf="description">{{ description }}</fynn-text>
+    </div>
+
+    <card-footer *ngIf="showFooter && footerText">
+        <fynn-text color="medium-faded" size="label" weight="regular">{{ footerText }}</fynn-text>
+    </card-footer>
+</card>

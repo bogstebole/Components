@@ -1,0 +1,130 @@
+.playground-container {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: var(--fynn-space-24);
+    align-items: start;
+    min-height: calc(100vh - 150px);
+}
+
+/* Controls Panel */
+.controls-panel {
+    background: var(--fynn-color-light);
+    padding: var(--fynn-space-24);
+    border-radius: var(--fynn-radius-16);
+    border: 1px solid var(--fynn-color-medium-subtle);
+    position: sticky;
+    top: 90px;
+}
+
+.controls-panel h2 {
+    font-size: var(--fynn-font-size-lg);
+    color: var(--fynn-color-dark);
+    margin-bottom: var(--fynn-space-16);
+    border-bottom: 1px solid var(--fynn-color-medium-subtle);
+    padding-bottom: var(--fynn-space-8);
+}
+
+.controls-panel h3 {
+    font-size: var(--fynn-font-size-base);
+    color: var(--fynn-color-medium);
+    margin: var(--fynn-space-12) 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.divider {
+    height: 1px;
+    background: var(--fynn-color-medium-subtle);
+    margin: var(--fynn-space-24) 0;
+}
+
+.form-group {
+    margin-bottom: var(--fynn-space-12);
+}
+
+.form-group label {
+    display: block;
+    font-size: var(--fynn-font-size-sm);
+    font-weight: var(--fynn-font-weight-semibold);
+    color: var(--fynn-color-medium);
+    margin-bottom: var(--fynn-space-4);
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: var(--fynn-space-8);
+    border: 1px solid var(--fynn-color-medium-subtle);
+    border-radius: var(--fynn-radius-8);
+    font-family: inherit;
+    font-size: var(--fynn-font-size-sm);
+    color: var(--fynn-color-dark);
+    background: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--fynn-color-primary);
+    box-shadow: 0 0 0 2px var(--fynn-color-primary-faded);
+}
+
+.form-group.checkbox label {
+    display: flex;
+    align-items: center;
+    gap: var(--fynn-space-8);
+    cursor: pointer;
+}
+
+.form-group.checkbox input {
+    width: auto;
+}
+
+/* Preview Panel */
+.preview-panel {
+    background: var(--fynn-color-light);
+    padding: var(--fynn-space-32);
+    border-radius: var(--fynn-radius-16);
+    border: 1px solid var(--fynn-color-medium-subtle);
+    min-height: 600px;
+}
+
+.preview-header h2 {
+    font-size: var(--fynn-font-size-lg);
+    color: var(--fynn-color-dark);
+    margin-bottom: var(--fynn-space-24);
+}
+
+.preview-item {
+    margin-bottom: var(--fynn-space-32);
+}
+
+.preview-label {
+    font-size: var(--fynn-font-size-sm);
+    color: var(--fynn-color-medium);
+    text-transform: uppercase;
+    margin-bottom: var(--fynn-space-12);
+    letter-spacing: 0.05em;
+}
+
+.component-wrapper {
+    padding: var(--fynn-space-24);
+    background: #f9fafb;
+    /* Light gray background to show card contrast */
+    border-radius: var(--fynn-radius-12);
+    border: 1px dashed var(--fynn-color-medium-subtle);
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 800px) {
+    .playground-container {
+        grid-template-columns: 1fr;
+    }
+
+    .controls-panel {
+        position: static;
+    }
+}

@@ -1,0 +1,59 @@
+:host {
+    font-family: var(--fynn-new-font-family);
+    display: inline;
+}
+
+span {
+    display: inline;
+}
+
+/* Color variants */
+.color-dark {
+    color: var(--fynn-color-dark);
+}
+
+.color-medium {
+    color: var(--fynn-color-medium);
+}
+
+.color-medium-faded {
+    color: var(--fynn-color-medium-faded);
+}
+
+.color-primary {
+    color: var(--fynn-color-primary);
+}
+
+.color-error {
+    color: var(--fynn-color-danger);
+}
+
+/* Size variants */
+.size-label {
+    font-size: var(--fynn-font-size-sm);
+    line-height: var(--fynn-line-height-sm);
+}
+
+.size-paragraph {
+    font-size: var(--fynn-font-size-base);
+    line-height: var(--fynn-line-height-base);
+}
+
+.size-h2 {
+    font-size: var(--fynn-font-size-lg);
+    line-height: var(--fynn-line-height-lg);
+}
+
+.size-h1 {
+    font-size: var(--fynn-font-size-xl);
+    line-height: var(--fynn-line-height-xl);
+}
+
+/* Weight variants */
+.weight-regular {
+    font-weight: var(--fynn-font-weight-regular);
+}
+
+.weight-semibold {
+    font-weight: var(--fynn-font-weight-semibold);
+}

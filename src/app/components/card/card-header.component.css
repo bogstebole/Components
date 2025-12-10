@@ -1,0 +1,48 @@
+.card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--fynn-space-8);
+    height: 32px;
+}
+
+.card-header-start {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: var(--fynn-space-4);
+}
+
+/* Right container for end slot and actions */
+.card-header-right {
+    display: flex;
+    align-items: center;
+    /* No gap here, we manage spacing in children to handle collapse */
+}
+
+/* Add margin to end slot if needed, or rely on start pushing it */
+.card-header-end {
+    display: flex;
+    align-items: center;
+    gap: var(--fynn-space-8);
+    font-size: var(--fynn-font-size-sm);
+    color: var(--fynn-color-medium);
+}
+
+.card-header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--fynn-space-8);
+
+    /* Hidden state */
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    /* Transition */
+    transition: max-width 0.3s ease-in-out, opacity 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+
+    /* Prevent wrapping during transition */
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}

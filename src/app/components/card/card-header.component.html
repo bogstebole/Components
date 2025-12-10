@@ -1,0 +1,13 @@
+<div class="card-header">
+    <div class="card-header-start">
+        <ng-content></ng-content>
+    </div>
+    <div class="card-header-right">
+        <div class="card-header-end">
+            <ng-content select="[slot=end]"></ng-content>
+        </div>
+        <div class="card-header-actions">
+            <ng-content select="[slot=actions]"></ng-content>
+        </div>
+    </div>
+</div>

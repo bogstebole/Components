@@ -1,0 +1,109 @@
+<div class="playground-container">
+
+    <!-- Controls Panel -->
+    <div class="controls-panel">
+        <h2>Playground Controls</h2>
+
+        <div class="control-section">
+            <h3>Badge Settings</h3>
+
+            <div class="form-group">
+                <label>Variant</label>
+                <select [(ngModel)]="badgeVariant">
+                    <option *ngFor="let v of badgeVariants" [value]="v">{{ v }}</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Label</label>
+                <input type="text" [(ngModel)]="badgeText">
+            </div>
+
+            <div class="form-group">
+                <label>Leading Icon</label>
+                <input type="text" [(ngModel)]="badgeIcon" placeholder="Icon name (e.g. placeholder)">
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="control-section">
+            <h3>Card Settings</h3>
+
+            <div class="form-group">
+                <label>Header Title</label>
+                <input type="text" [(ngModel)]="cardTitle">
+            </div>
+
+            <div class="form-group">
+                <label>Header Subtitle</label>
+                <input type="text" [(ngModel)]="cardSubtitle">
+            </div>
+
+            <div class="form-group checkbox">
+                <label>
+                    <input type="checkbox" [(ngModel)]="showBadgeInHeader">
+                    Show Badge in Header
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label>Content</label>
+                <textarea [(ngModel)]="cardContent" rows="4"></textarea>
+            </div>
+
+            <div class="form-group checkbox">
+                <label>
+                    <input type="checkbox" [(ngModel)]="showFooter">
+                    Show Footer
+                </label>
+            </div>
+
+            <div class="form-group" *ngIf="showFooter">
+                <label>Footer Text</label>
+                <input type="text" [(ngModel)]="cardFooterTest">
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview Panel -->
+    <div class="preview-panel">
+        <div class="preview-header">
+            <h2>Live Preview</h2>
+        </div>
+
+        <div class="preview-content">
+
+            <!-- Component Preview -->
+            <div class="preview-item">
+                <div class="preview-label">Badge Component</div>
+                <div class="component-wrapper">
+                    <badge [variant]="badgeVariant" [icon]="badgeIcon">{{ badgeText }}</badge>
+                </div>
+            </div>
+
+            <div class="preview-item">
+                <div class="preview-label">Card Component</div>
+                <div class="component-wrapper">
+                    <card>
+                        <card-header>
+                            <badge *ngIf="showBadgeInHeader" [variant]="badgeVariant" [icon]="badgeIcon">{{ badgeText }}
+                            </badge>
+                            <div>{{ cardTitle }}</div>
+                            <div slot="end" class="text-xs">{{ cardSubtitle }}</div>
+                        </card-header>
+
+                        <card-section>
+                            <p>{{ cardContent }}</p>
+                        </card-section>
+
+                        <card-footer *ngIf="showFooter">
+                            <div class="text-sm font-medium">{{ cardFooterTest }}</div>
+                        </card-footer>
+                    </card>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
