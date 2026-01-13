@@ -106,3 +106,102 @@ export const IconOnly: Story = {
     `,
     }),
 };
+
+export const WithStartIcon: Story = {
+    args: {
+        variant: 'solid',
+        color: 'primary',
+        size: 'default',
+    },
+    decorators: [
+        (storyFn) => {
+            const story = storyFn();
+            return {
+                ...story,
+                moduleMetadata: {
+                    imports: [IconComponent],
+                },
+            };
+        },
+    ],
+    render: (args) => ({
+        props: args,
+        template: `
+      <fynn-button [variant]="variant" [color]="color" [size]="size" [disabled]="disabled">
+        <icon slot="start" name="star" [size]="size === 'small' ? 16 : 20"></icon>
+        Button with Icon
+      </fynn-button>
+    `,
+    }),
+};
+
+export const WithEndIcon: Story = {
+    args: {
+        variant: 'solid',
+        color: 'primary',
+        size: 'default',
+    },
+    decorators: [
+        (storyFn) => {
+            const story = storyFn();
+            return {
+                ...story,
+                moduleMetadata: {
+                    imports: [IconComponent],
+                },
+            };
+        },
+    ],
+    render: (args) => ({
+        props: args,
+        template: `
+      <fynn-button [variant]="variant" [color]="color" [size]="size" [disabled]="disabled">
+        Button with Icon
+        <icon slot="end" name="arrow-forward" [size]="size === 'small' ? 16 : 20"></icon>
+      </fynn-button>
+    `,
+    }),
+};
+
+export const WithBothIcons: Story = {
+    args: {
+        variant: 'outline',
+        color: 'primary',
+        size: 'default',
+    },
+    decorators: [
+        (storyFn) => {
+            const story = storyFn();
+            return {
+                ...story,
+                moduleMetadata: {
+                    imports: [IconComponent],
+                },
+            };
+        },
+    ],
+    render: (args) => ({
+        props: args,
+        template: `
+      <fynn-button [variant]="variant" [color]="color" [size]="size" [disabled]="disabled">
+        <icon slot="start" name="star" [size]="size === 'small' ? 16 : 20"></icon>
+        Both Icons
+        <icon slot="end" name="arrow-forward" [size]="size === 'small' ? 16 : 20"></icon>
+      </fynn-button>
+    `,
+    }),
+};
+
+export const Disabled: Story = {
+    args: {
+        variant: 'solid',
+        color: 'primary',
+        size: 'default',
+        disabled: true,
+    },
+    render: (args) => ({
+        props: args,
+        template: `<fynn-button [variant]="variant" [color]="color" [size]="size" [disabled]="disabled">Disabled Button</fynn-button>`,
+    }),
+};
+

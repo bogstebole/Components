@@ -1,3 +1,5 @@
 <button [class]="classes" [disabled]="disabled" [type]="type">
+    <ng-content select="[slot='start']"></ng-content>
     <ng-content></ng-content>
+    <ng-content select="[slot='end']"></ng-content>
 </button>
