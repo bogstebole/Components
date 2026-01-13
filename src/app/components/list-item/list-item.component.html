@@ -1,0 +1,10 @@
+<button [class]="classes" [disabled]="disabled" type="button">
+    <div class="list-item-content">
+        <div class="slot-start">
+            <ng-content select="[slot='start']"></ng-content>
+        </div>
+        <div class="label" *ngIf="!collapsed">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</button>

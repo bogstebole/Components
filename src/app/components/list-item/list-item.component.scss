@@ -1,0 +1,84 @@
+:host {
+    display: block;
+    width: 100%;
+}
+
+.fynn-list-item {
+    font-family: var(--fynn-new-font-family);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: var(--fynn-padding-8);
+    border-radius: var(--fynn-radius-8);
+    transition: background-color 0.2s ease-in-out;
+    text-align: left;
+
+    /* Font styles */
+    font-size: var(--fynn-font-size-base);
+    line-height: var(--fynn-line-height-base);
+    font-weight: var(--fynn-font-weight-regular);
+    color: var(--fynn-color-dark);
+}
+
+.list-item-content {
+    display: flex;
+    align-items: center;
+    gap: var(--fynn-space-8);
+    width: 100%;
+}
+
+.slot-start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.label {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* COLLAPSED STATE */
+.fynn-list-item.collapsed {
+    width: 32px;
+    height: 32px;
+}
+
+.fynn-list-item.collapsed .list-item-content {
+    justify-content: center;
+}
+
+/* SELECTED STATE */
+.fynn-list-item.state-selected {
+    background-color: var(--fynn-color-primary-subtle);
+}
+
+/* HOVER STATES */
+
+/* Default state hover */
+.fynn-list-item.state-default:not(.disabled):hover {
+    background-color: var(--fynn-color-light-faded);
+}
+
+/* Selected state hover */
+.fynn-list-item.state-selected:not(.disabled):hover {
+    background-color: var(--fynn-color-primary-pale);
+}
+
+/* DISABLED STATE */
+.fynn-list-item.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* FOCUS STATE */
+.fynn-list-item:focus-visible {
+    outline: 2px solid var(--fynn-color-primary);
+    outline-offset: -2px;
+}
